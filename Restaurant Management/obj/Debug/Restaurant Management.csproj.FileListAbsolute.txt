@@ -25,3 +25,6 @@ C:\Users\Md. Tanvir Hossain\Downloads\Restaurant Management\Restaurant Managemen
 C:\Users\Md. Tanvir Hossain\Downloads\Restaurant Management\Restaurant Management\Restaurant Management\obj\Debug\Restaurant_Management.Manager.resources
 C:\Users\Md. Tanvir Hossain\Downloads\Restaurant Management\Restaurant Management\Restaurant Management\obj\Debug\Restaurant_Management.Properties.Resources.resources
 C:\Users\Md. Tanvir Hossain\Downloads\Restaurant Management\Restaurant Management\Restaurant Management\obj\Debug\Restaurant Management.csproj.GenerateResource.Cache
+C:\Users\Md. Tanvir Hossain\Documents\GitHub\Restaurant-Management-system\Restaurant Management\bin\Debug\Restaurant Management.exe.config
+C:\Users\Md. Tanvir Hossain\Documents\GitHub\Restaurant-Management-system\Restaurant Management\obj\Debug\Restaurant Management.exe
+C:\Users\Md. Tanvir Hossain\Documents\GitHub\Restaurant-Management-system\Restaurant Management\obj\Debug\Restaurant Management.pdb
