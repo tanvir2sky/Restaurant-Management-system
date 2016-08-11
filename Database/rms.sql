@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2016 at 09:10 AM
+-- Generation Time: Aug 11, 2016 at 03:37 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -44,22 +44,17 @@ CREATE TABLE `employee` (
   `employee_name` varchar(100) NOT NULL,
   `employee_email` varchar(100) NOT NULL,
   `employee_address` varchar(100) NOT NULL,
-  `employee_role` varchar(100) NOT NULL,
   `employee_salary` int(20) NOT NULL,
+  `employee_role` varchar(1000) NOT NULL,
   `employee_joining_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `employee_role`
+-- Dumping data for table `employee`
 --
 
-CREATE TABLE `employee_role` (
-  `employee_role_id` int(30) NOT NULL,
-  `employee_role_name` varchar(3) NOT NULL,
-  `employee_role_desc` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `employee` (`employee_id`, `employee_name`, `employee_email`, `employee_address`, `employee_salary`, `employee_role`, `employee_joining_date`) VALUES
+(1001, 'Tanvir Hossain', 'tanvir2sky@gmail.com', 'Mohakhali Dhaka', 0, 'Owner', '2016-08-02');
 
 -- --------------------------------------------------------
 
@@ -95,9 +90,15 @@ CREATE TABLE `food_items` (
 
 CREATE TABLE `login` (
   `employee_id` int(50) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `employee_role_id` int(30) NOT NULL
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`employee_id`, `password`) VALUES
+(1001, 'tanvir');
 
 -- --------------------------------------------------------
 
@@ -146,12 +147,6 @@ ALTER TABLE `employee`
   ADD UNIQUE KEY `employee_id` (`employee_id`);
 
 --
--- Indexes for table `employee_role`
---
-ALTER TABLE `employee_role`
-  ADD PRIMARY KEY (`employee_role_id`);
-
---
 -- Indexes for table `food_category`
 --
 ALTER TABLE `food_category`
@@ -168,8 +163,7 @@ ALTER TABLE `food_items`
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
-  ADD KEY `fk_login` (`employee_id`),
-  ADD KEY `fk_login1` (`employee_role_id`);
+  ADD KEY `fk_login` (`employee_id`);
 
 --
 -- Indexes for table `sales`
@@ -194,11 +188,6 @@ ALTER TABLE `sales_items`
 --
 ALTER TABLE `attendence`
   MODIFY `attendence_id` int(50) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `employee_role`
---
-ALTER TABLE `employee_role`
-  MODIFY `employee_role_id` int(30) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `food_category`
 --
@@ -239,8 +228,7 @@ ALTER TABLE `food_items`
 -- Constraints for table `login`
 --
 ALTER TABLE `login`
-  ADD CONSTRAINT `fk_login` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`employee_id`),
-  ADD CONSTRAINT `fk_login1` FOREIGN KEY (`employee_role_id`) REFERENCES `employee_role` (`employee_role_id`);
+  ADD CONSTRAINT `fk_login` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`employee_id`);
 
 --
 -- Constraints for table `sales_items`

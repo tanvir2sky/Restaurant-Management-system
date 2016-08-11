@@ -26,7 +26,7 @@ namespace Restaurant_Management
         private void Initialize()
         {
             server = "localhost";
-            database = "demo";
+            database = "rms";
             uid = "root";
             password = "";
             string connectionString;

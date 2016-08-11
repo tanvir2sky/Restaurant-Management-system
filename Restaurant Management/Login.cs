@@ -42,7 +42,7 @@ namespace Restaurant_Management
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd = con.CreateCommand();
-                cmd.CommandText = "select count(*) from user where user_id='"+user+"' and password='"+pass+"';";
+                cmd.CommandText = "select count(*) from login where employee_id='"+user+"' and password='"+pass+"';";
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 if (count == 1)
                 {
