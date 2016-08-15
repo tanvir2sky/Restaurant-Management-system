@@ -48,5 +48,12 @@ namespace Restaurant_Management
         {
 
         }
+
+        private void metroButton7_Click(object sender, EventArgs e)
+        {
+            add_employee_panel.Hide();
+            dashboard_button.Hide();
+            add_table_panel.Show();
+        }
     }
 }

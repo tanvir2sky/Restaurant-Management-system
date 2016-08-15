@@ -41,3 +41,4 @@ C:\Users\tanvi\OneDrive\Documents\GitHub\Restaurant-Management-system\Restaurant
 C:\Users\tanvi\OneDrive\Documents\GitHub\Restaurant-Management-system\Restaurant Management\obj\Debug\Restaurant_Management.Manager.resources
 C:\Users\tanvi\OneDrive\Documents\GitHub\Restaurant-Management-system\Restaurant Management\obj\Debug\Restaurant_Management.Properties.Resources.resources
 C:\Users\tanvi\OneDrive\Documents\GitHub\Restaurant-Management-system\Restaurant Management\obj\Debug\Restaurant Management.csproj.GenerateResource.Cache
+C:\Users\tanvi\OneDrive\Documents\GitHub\Restaurant-Management-system\Restaurant Management\obj\Debug\Restaurant_Management.Salesman.resources
