@@ -31,21 +31,21 @@
             this.menu_panel = new System.Windows.Forms.Panel();
             this.metroButton8 = new MetroFramework.Controls.MetroButton();
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.add_employee_button = new MetroFramework.Controls.MetroButton();
             this.dashboard_button = new MetroFramework.Controls.MetroButton();
             this.dashbord_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.add_employee_panel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.role = new System.Windows.Forms.ComboBox();
+            this.date = new System.Windows.Forms.DateTimePicker();
+            this.add_employee = new System.Windows.Forms.Button();
+            this.salary = new System.Windows.Forms.TextBox();
+            this.address = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,10 +53,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.add_table_panel = new System.Windows.Forms.Panel();
+            this.view_employee_button = new MetroFramework.Controls.MetroButton();
+            this.view_employee_panel = new System.Windows.Forms.Panel();
+            this.view_employee_grid = new System.Windows.Forms.DataGridView();
+            this.delete_employee_button = new MetroFramework.Controls.MetroButton();
+            this.delete_employee_panel = new System.Windows.Forms.Panel();
+            this.delete_id = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.delete_button = new System.Windows.Forms.Button();
+            this.delete_label = new System.Windows.Forms.Label();
+            this.delete_error = new System.Windows.Forms.Label();
             this.menu_panel.SuspendLayout();
             this.dashbord_panel.SuspendLayout();
             this.add_employee_panel.SuspendLayout();
-            this.add_table_panel.SuspendLayout();
+            this.view_employee_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.view_employee_grid)).BeginInit();
+            this.delete_employee_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu_panel
@@ -64,10 +76,8 @@
             this.menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.menu_panel.Controls.Add(this.metroButton8);
             this.menu_panel.Controls.Add(this.metroButton7);
-            this.menu_panel.Controls.Add(this.metroButton6);
-            this.menu_panel.Controls.Add(this.metroButton5);
-            this.menu_panel.Controls.Add(this.metroButton4);
-            this.menu_panel.Controls.Add(this.metroButton3);
+            this.menu_panel.Controls.Add(this.delete_employee_button);
+            this.menu_panel.Controls.Add(this.view_employee_button);
             this.menu_panel.Controls.Add(this.add_employee_button);
             this.menu_panel.Controls.Add(this.dashboard_button);
             this.menu_panel.Location = new System.Drawing.Point(7, 9);
@@ -94,42 +104,6 @@
             this.metroButton7.UseSelectable = true;
             this.metroButton7.Click += new System.EventHandler(this.metroButton7_Click);
             // 
-            // metroButton6
-            // 
-            this.metroButton6.Location = new System.Drawing.Point(0, 272);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(228, 62);
-            this.metroButton6.TabIndex = 0;
-            this.metroButton6.Text = "metroButton1";
-            this.metroButton6.UseSelectable = true;
-            // 
-            // metroButton5
-            // 
-            this.metroButton5.Location = new System.Drawing.Point(-3, 272);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(228, 62);
-            this.metroButton5.TabIndex = 0;
-            this.metroButton5.Text = "metroButton1";
-            this.metroButton5.UseSelectable = true;
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(0, 204);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(228, 62);
-            this.metroButton4.TabIndex = 0;
-            this.metroButton4.Text = "metroButton1";
-            this.metroButton4.UseSelectable = true;
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(0, 136);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(228, 62);
-            this.metroButton3.TabIndex = 0;
-            this.metroButton3.Text = "metroButton1";
-            this.metroButton3.UseSelectable = true;
-            // 
             // add_employee_button
             // 
             this.add_employee_button.Location = new System.Drawing.Point(0, 68);
@@ -142,9 +116,9 @@
             // 
             // dashboard_button
             // 
-            this.dashboard_button.Location = new System.Drawing.Point(3, 0);
+            this.dashboard_button.Location = new System.Drawing.Point(-3, 3);
             this.dashboard_button.Name = "dashboard_button";
-            this.dashboard_button.Size = new System.Drawing.Size(228, 62);
+            this.dashboard_button.Size = new System.Drawing.Size(231, 62);
             this.dashboard_button.TabIndex = 0;
             this.dashboard_button.Text = "Dashboard";
             this.dashboard_button.UseSelectable = true;
@@ -153,7 +127,7 @@
             // dashbord_panel
             // 
             this.dashbord_panel.Controls.Add(this.label1);
-            this.dashbord_panel.Location = new System.Drawing.Point(1, 6);
+            this.dashbord_panel.Location = new System.Drawing.Point(1213, 49);
             this.dashbord_panel.Name = "dashbord_panel";
             this.dashbord_panel.Size = new System.Drawing.Size(575, 602);
             this.dashbord_panel.TabIndex = 1;
@@ -172,107 +146,157 @@
             // 
             // add_employee_panel
             // 
-            this.add_employee_panel.Controls.Add(this.button1);
-            this.add_employee_panel.Controls.Add(this.textBox5);
-            this.add_employee_panel.Controls.Add(this.textBox4);
-            this.add_employee_panel.Controls.Add(this.textBox3);
-            this.add_employee_panel.Controls.Add(this.textBox2);
-            this.add_employee_panel.Controls.Add(this.textBox1);
+            this.add_employee_panel.Controls.Add(this.role);
+            this.add_employee_panel.Controls.Add(this.date);
+            this.add_employee_panel.Controls.Add(this.add_employee);
+            this.add_employee_panel.Controls.Add(this.salary);
+            this.add_employee_panel.Controls.Add(this.address);
+            this.add_employee_panel.Controls.Add(this.email);
+            this.add_employee_panel.Controls.Add(this.name);
+            this.add_employee_panel.Controls.Add(this.label10);
+            this.add_employee_panel.Controls.Add(this.label9);
+            this.add_employee_panel.Controls.Add(this.label8);
             this.add_employee_panel.Controls.Add(this.label7);
             this.add_employee_panel.Controls.Add(this.label6);
             this.add_employee_panel.Controls.Add(this.label5);
             this.add_employee_panel.Controls.Add(this.label4);
             this.add_employee_panel.Controls.Add(this.label3);
             this.add_employee_panel.Controls.Add(this.label2);
-            this.add_employee_panel.Location = new System.Drawing.Point(5, 3);
+            this.add_employee_panel.Location = new System.Drawing.Point(1102, 417);
             this.add_employee_panel.Name = "add_employee_panel";
             this.add_employee_panel.Size = new System.Drawing.Size(574, 602);
             this.add_employee_panel.TabIndex = 1;
             this.add_employee_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.add_employee_panel_Paint);
             // 
-            // button1
+            // role
             // 
-            this.button1.Location = new System.Drawing.Point(321, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 29);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add Employee";
-            this.button1.UseVisualStyleBackColor = true;
+            this.role.FormattingEnabled = true;
+            this.role.Items.AddRange(new object[] {
+            "MANAGER",
+            "STAFF"});
+            this.role.Location = new System.Drawing.Point(249, 261);
+            this.role.Name = "role";
+            this.role.Size = new System.Drawing.Size(260, 21);
+            this.role.TabIndex = 7;
             // 
-            // textBox5
+            // date
             // 
-            this.textBox5.Location = new System.Drawing.Point(249, 292);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(260, 20);
-            this.textBox5.TabIndex = 5;
+            this.date.Location = new System.Drawing.Point(249, 303);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(260, 20);
+            this.date.TabIndex = 8;
             // 
-            // textBox4
+            // add_employee
             // 
-            this.textBox4.Location = new System.Drawing.Point(249, 249);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 20);
-            this.textBox4.TabIndex = 5;
+            this.add_employee.Location = new System.Drawing.Point(297, 426);
+            this.add_employee.Name = "add_employee";
+            this.add_employee.Size = new System.Drawing.Size(129, 29);
+            this.add_employee.TabIndex = 6;
+            this.add_employee.Text = "Add Employee";
+            this.add_employee.UseVisualStyleBackColor = true;
+            this.add_employee.Click += new System.EventHandler(this.add_employee_Click);
             // 
-            // textBox3
+            // salary
             // 
-            this.textBox3.Location = new System.Drawing.Point(249, 190);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 20);
-            this.textBox3.TabIndex = 5;
+            this.salary.Location = new System.Drawing.Point(249, 217);
+            this.salary.Multiline = true;
+            this.salary.Name = "salary";
+            this.salary.Size = new System.Drawing.Size(260, 30);
+            this.salary.TabIndex = 5;
             // 
-            // textBox2
+            // address
             // 
-            this.textBox2.Location = new System.Drawing.Point(249, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 20);
-            this.textBox2.TabIndex = 5;
+            this.address.Location = new System.Drawing.Point(249, 181);
+            this.address.Multiline = true;
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(260, 30);
+            this.address.TabIndex = 5;
             // 
-            // textBox1
+            // email
             // 
-            this.textBox1.Location = new System.Drawing.Point(249, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 20);
-            this.textBox1.TabIndex = 5;
+            this.email.Location = new System.Drawing.Point(249, 145);
+            this.email.Multiline = true;
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(260, 30);
+            this.email.TabIndex = 5;
+            // 
+            // name
+            // 
+            this.name.Location = new System.Drawing.Point(249, 99);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(260, 30);
+            this.name.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(28, 303);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 16);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Joining Date";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(28, 267);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(102, 16);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Employee Role";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(28, 218);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 16);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Employee Salary";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 253);
+            this.label7.Location = new System.Drawing.Point(28, 182);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 16);
+            this.label7.Size = new System.Drawing.Size(124, 16);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Joining Date";
+            this.label7.Text = "Employee Address";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 296);
+            this.label6.Location = new System.Drawing.Point(37, 182);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 16);
+            this.label6.Size = new System.Drawing.Size(110, 16);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Demo password";
+            this.label6.Text = "Employee Name";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 194);
+            this.label5.Location = new System.Drawing.Point(28, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.Size = new System.Drawing.Size(107, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Salary";
+            this.label5.Text = "Employee Email";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 148);
+            this.label4.Location = new System.Drawing.Point(28, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 16);
+            this.label4.Size = new System.Drawing.Size(110, 16);
             this.label4.TabIndex = 4;
-            this.label4.Text = "EmployeRole";
+            this.label4.Text = "Employee Name";
             // 
             // label3
             // 
@@ -297,18 +321,117 @@
             // 
             // add_table_panel
             // 
-            this.add_table_panel.Controls.Add(this.dashbord_panel);
-            this.add_table_panel.Controls.Add(this.add_employee_panel);
-            this.add_table_panel.Location = new System.Drawing.Point(265, 13);
+            this.add_table_panel.Location = new System.Drawing.Point(341, 665);
             this.add_table_panel.Name = "add_table_panel";
             this.add_table_panel.Size = new System.Drawing.Size(579, 598);
             this.add_table_panel.TabIndex = 2;
+            // 
+            // view_employee_button
+            // 
+            this.view_employee_button.Location = new System.Drawing.Point(0, 136);
+            this.view_employee_button.Name = "view_employee_button";
+            this.view_employee_button.Size = new System.Drawing.Size(228, 62);
+            this.view_employee_button.TabIndex = 0;
+            this.view_employee_button.Text = "View Employee";
+            this.view_employee_button.UseSelectable = true;
+            this.view_employee_button.Click += new System.EventHandler(this.view_employee_button_Click);
+            // 
+            // view_employee_panel
+            // 
+            this.view_employee_panel.Controls.Add(this.view_employee_grid);
+            this.view_employee_panel.Location = new System.Drawing.Point(1102, 12);
+            this.view_employee_panel.Name = "view_employee_panel";
+            this.view_employee_panel.Size = new System.Drawing.Size(722, 608);
+            this.view_employee_panel.TabIndex = 3;
+            // 
+            // view_employee_grid
+            // 
+            this.view_employee_grid.AllowUserToAddRows = false;
+            this.view_employee_grid.AllowUserToDeleteRows = false;
+            this.view_employee_grid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.view_employee_grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.view_employee_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.view_employee_grid.Location = new System.Drawing.Point(13, 3);
+            this.view_employee_grid.Name = "view_employee_grid";
+            this.view_employee_grid.ReadOnly = true;
+            this.view_employee_grid.Size = new System.Drawing.Size(708, 600);
+            this.view_employee_grid.TabIndex = 0;
+            // 
+            // delete_employee_button
+            // 
+            this.delete_employee_button.Location = new System.Drawing.Point(0, 204);
+            this.delete_employee_button.Name = "delete_employee_button";
+            this.delete_employee_button.Size = new System.Drawing.Size(228, 62);
+            this.delete_employee_button.TabIndex = 0;
+            this.delete_employee_button.Text = "Delete Employee";
+            this.delete_employee_button.UseSelectable = true;
+            this.delete_employee_button.Click += new System.EventHandler(this.delete_employee_button_Click);
+            // 
+            // delete_employee_panel
+            // 
+            this.delete_employee_panel.Controls.Add(this.delete_error);
+            this.delete_employee_panel.Controls.Add(this.delete_label);
+            this.delete_employee_panel.Controls.Add(this.delete_button);
+            this.delete_employee_panel.Controls.Add(this.label11);
+            this.delete_employee_panel.Controls.Add(this.delete_id);
+            this.delete_employee_panel.Location = new System.Drawing.Point(254, 14);
+            this.delete_employee_panel.Name = "delete_employee_panel";
+            this.delete_employee_panel.Size = new System.Drawing.Size(665, 618);
+            this.delete_employee_panel.TabIndex = 4;
+            // 
+            // delete_id
+            // 
+            this.delete_id.Location = new System.Drawing.Point(219, 28);
+            this.delete_id.Multiline = true;
+            this.delete_id.Name = "delete_id";
+            this.delete_id.Size = new System.Drawing.Size(215, 45);
+            this.delete_id.TabIndex = 0;
+            this.delete_id.TextChanged += new System.EventHandler(this.check_if_found);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(40, 48);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Insert Employee ID";
+            // 
+            // delete_button
+            // 
+            this.delete_button.Location = new System.Drawing.Point(294, 148);
+            this.delete_button.Name = "delete_button";
+            this.delete_button.Size = new System.Drawing.Size(75, 23);
+            this.delete_button.TabIndex = 2;
+            this.delete_button.Text = "DELETE";
+            this.delete_button.UseVisualStyleBackColor = true;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
+            // 
+            // delete_label
+            // 
+            this.delete_label.AutoSize = true;
+            this.delete_label.Location = new System.Drawing.Point(201, 111);
+            this.delete_label.Name = "delete_label";
+            this.delete_label.Size = new System.Drawing.Size(0, 13);
+            this.delete_label.TabIndex = 3;
+            // 
+            // delete_error
+            // 
+            this.delete_error.AutoSize = true;
+            this.delete_error.Location = new System.Drawing.Point(263, 90);
+            this.delete_error.Name = "delete_error";
+            this.delete_error.Size = new System.Drawing.Size(0, 13);
+            this.delete_error.TabIndex = 4;
             // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 634);
+            this.ClientSize = new System.Drawing.Size(1932, 1092);
+            this.Controls.Add(this.delete_employee_panel);
+            this.Controls.Add(this.view_employee_panel);
+            this.Controls.Add(this.add_employee_panel);
+            this.Controls.Add(this.dashbord_panel);
             this.Controls.Add(this.add_table_panel);
             this.Controls.Add(this.menu_panel);
             this.Name = "Manager";
@@ -317,7 +440,10 @@
             this.dashbord_panel.PerformLayout();
             this.add_employee_panel.ResumeLayout(false);
             this.add_employee_panel.PerformLayout();
-            this.add_table_panel.ResumeLayout(false);
+            this.view_employee_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.view_employee_grid)).EndInit();
+            this.delete_employee_panel.ResumeLayout(false);
+            this.delete_employee_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -327,27 +453,37 @@
         private System.Windows.Forms.Panel menu_panel;
         private MetroFramework.Controls.MetroButton metroButton8;
         private MetroFramework.Controls.MetroButton metroButton7;
-        private MetroFramework.Controls.MetroButton metroButton6;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton add_employee_button;
         private MetroFramework.Controls.MetroButton dashboard_button;
         private System.Windows.Forms.Panel dashbord_panel;
         private System.Windows.Forms.Panel add_employee_panel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button add_employee;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel add_table_panel;
+        private System.Windows.Forms.ComboBox role;
+        private System.Windows.Forms.DateTimePicker date;
+        private System.Windows.Forms.TextBox salary;
+        private System.Windows.Forms.TextBox address;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel add_table_panel;
+        private MetroFramework.Controls.MetroButton view_employee_button;
+        private System.Windows.Forms.Panel view_employee_panel;
+        private System.Windows.Forms.DataGridView view_employee_grid;
+        private MetroFramework.Controls.MetroButton delete_employee_button;
+        private System.Windows.Forms.Panel delete_employee_panel;
+        private System.Windows.Forms.Button delete_button;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox delete_id;
+        private System.Windows.Forms.Label delete_label;
+        private System.Windows.Forms.Label delete_error;
     }
 }

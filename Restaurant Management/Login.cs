@@ -36,30 +36,7 @@ namespace Restaurant_Management
                 
 
             //checking done
-            try
-            {
-                MySqlConnection con = new Database().getConnection();
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd = con.CreateCommand();
-                cmd.CommandText = "select count(*) from login where employee_id='"+user+"' and password='"+pass+"';";
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                if (count == 1)
-                {
-                    MessageBox.Show("Logged In");
-                   
-                }
-                else {
-
-                    error_login.Show();
-                    error_user.Hide();
-                    error_password.Hide();
-                }
-            }
-            catch(MySqlException ex){
-                throw;
-                
-            }
+           
             
 
             
