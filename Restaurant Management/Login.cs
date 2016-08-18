@@ -13,6 +13,7 @@ namespace Restaurant_Management
 {
     public partial class Login : MetroFramework.Forms.MetroForm
     {
+        DataDataContext data = new DataDataContext(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\tanvi\OneDrive\Documents\GitHub\Restaurant-Management-system\Restaurant Management\RMS.mdf;Integrated Security=True");
         public Login()
         {
             InitializeComponent();
@@ -36,6 +37,28 @@ namespace Restaurant_Management
                 
 
             //checking done
+                var no = from m in data.logins where m.email == user && m.password == pass select m;
+                if (no.Count() == 1)
+                {
+                    login l = data.logins.SingleOrDefault(x => x.email == user);
+                    if (l.role == "manager") {
+                        Manager m = new Manager();
+                        m.Show();
+                    
+                    }
+                    else if (l.role == "staff") {
+                        Salesman s = new Salesman();
+                        s.Show();
+                    }
+
+
+                }
+                else
+                {
+                    error_login.Show();
+
+                
+                }
            
             
 

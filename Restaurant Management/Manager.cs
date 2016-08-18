@@ -64,6 +64,7 @@ namespace Restaurant_Management
             string eemail = email.Text;
             string erole = role.Text;
             decimal esalary = 0;
+            string epassord = e_password.Text;
             try
             {
                  esalary = Convert.ToDecimal(salary.Text);
@@ -98,6 +99,17 @@ namespace Restaurant_Management
                 
                 throw;
             }
+
+            login l = new login
+            {
+               email = eemail,
+               password =epassord,
+               role=erole
+
+
+            };
+            data.logins.InsertOnSubmit(l);
+            data.SubmitChanges();
             MessageBox.Show("Successfully Added New Employee");
 
 

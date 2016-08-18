@@ -11,4 +11,12 @@
       <Column Name="e_joining_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.login" Member="logins">
+    <Type Name="login">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="role" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

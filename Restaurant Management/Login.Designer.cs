@@ -132,9 +132,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(101, 182);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 25);
+            this.label1.Size = new System.Drawing.Size(65, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "User Id";
+            this.label1.Text = "Email";
             // 
             // label2
             // 
