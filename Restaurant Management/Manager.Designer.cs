@@ -63,12 +63,33 @@
             this.delete_button = new System.Windows.Forms.Button();
             this.delete_label = new System.Windows.Forms.Label();
             this.delete_error = new System.Windows.Forms.Label();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.update_employee_button = new MetroFramework.Controls.MetroButton();
+            this.update_employee_panel = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.update_id = new System.Windows.Forms.TextBox();
+            this.update_error = new System.Windows.Forms.Label();
+            this.urole = new System.Windows.Forms.ComboBox();
+            this.usalary = new System.Windows.Forms.TextBox();
+            this.uaddress = new System.Windows.Forms.TextBox();
+            this.uemail = new System.Windows.Forms.TextBox();
+            this.uname = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.update_employee = new System.Windows.Forms.Button();
             this.menu_panel.SuspendLayout();
             this.dashbord_panel.SuspendLayout();
             this.add_employee_panel.SuspendLayout();
             this.view_employee_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_employee_grid)).BeginInit();
             this.delete_employee_panel.SuspendLayout();
+            this.update_employee_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu_panel
@@ -76,6 +97,9 @@
             this.menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.menu_panel.Controls.Add(this.metroButton8);
             this.menu_panel.Controls.Add(this.metroButton7);
+            this.menu_panel.Controls.Add(this.update_employee_button);
+            this.menu_panel.Controls.Add(this.metroButton2);
+            this.menu_panel.Controls.Add(this.metroButton1);
             this.menu_panel.Controls.Add(this.delete_employee_button);
             this.menu_panel.Controls.Add(this.view_employee_button);
             this.menu_panel.Controls.Add(this.add_employee_button);
@@ -162,7 +186,7 @@
             this.add_employee_panel.Controls.Add(this.label4);
             this.add_employee_panel.Controls.Add(this.label3);
             this.add_employee_panel.Controls.Add(this.label2);
-            this.add_employee_panel.Location = new System.Drawing.Point(1102, 417);
+            this.add_employee_panel.Location = new System.Drawing.Point(1032, 478);
             this.add_employee_panel.Name = "add_employee_panel";
             this.add_employee_panel.Size = new System.Drawing.Size(574, 602);
             this.add_employee_panel.TabIndex = 1;
@@ -338,6 +362,7 @@
             // 
             // view_employee_panel
             // 
+            this.view_employee_panel.Controls.Add(this.delete_employee_panel);
             this.view_employee_panel.Controls.Add(this.view_employee_grid);
             this.view_employee_panel.Location = new System.Drawing.Point(1102, 12);
             this.view_employee_panel.Name = "view_employee_panel";
@@ -374,7 +399,7 @@
             this.delete_employee_panel.Controls.Add(this.delete_button);
             this.delete_employee_panel.Controls.Add(this.label11);
             this.delete_employee_panel.Controls.Add(this.delete_id);
-            this.delete_employee_panel.Location = new System.Drawing.Point(254, 14);
+            this.delete_employee_panel.Location = new System.Drawing.Point(3, 2);
             this.delete_employee_panel.Name = "delete_employee_panel";
             this.delete_employee_panel.Size = new System.Drawing.Size(665, 618);
             this.delete_employee_panel.TabIndex = 4;
@@ -423,12 +448,215 @@
             this.delete_error.Size = new System.Drawing.Size(0, 13);
             this.delete_error.TabIndex = 4;
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(3, 272);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(228, 62);
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.Text = "Delete Employee";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.delete_employee_button_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(-3, 272);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(228, 62);
+            this.metroButton2.TabIndex = 0;
+            this.metroButton2.Text = "Delete Employee";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.delete_employee_button_Click);
+            // 
+            // update_employee_button
+            // 
+            this.update_employee_button.Location = new System.Drawing.Point(0, 272);
+            this.update_employee_button.Name = "update_employee_button";
+            this.update_employee_button.Size = new System.Drawing.Size(228, 62);
+            this.update_employee_button.TabIndex = 0;
+            this.update_employee_button.Text = "Update Employee";
+            this.update_employee_button.UseSelectable = true;
+            this.update_employee_button.Click += new System.EventHandler(this.update_employee_button_Click);
+            // 
+            // update_employee_panel
+            // 
+            this.update_employee_panel.Controls.Add(this.update_employee);
+            this.update_employee_panel.Controls.Add(this.urole);
+            this.update_employee_panel.Controls.Add(this.usalary);
+            this.update_employee_panel.Controls.Add(this.uaddress);
+            this.update_employee_panel.Controls.Add(this.uemail);
+            this.update_employee_panel.Controls.Add(this.uname);
+            this.update_employee_panel.Controls.Add(this.label13);
+            this.update_employee_panel.Controls.Add(this.label14);
+            this.update_employee_panel.Controls.Add(this.label15);
+            this.update_employee_panel.Controls.Add(this.label16);
+            this.update_employee_panel.Controls.Add(this.label17);
+            this.update_employee_panel.Controls.Add(this.label18);
+            this.update_employee_panel.Controls.Add(this.label19);
+            this.update_employee_panel.Controls.Add(this.update_error);
+            this.update_employee_panel.Controls.Add(this.update_id);
+            this.update_employee_panel.Controls.Add(this.label12);
+            this.update_employee_panel.Location = new System.Drawing.Point(253, 15);
+            this.update_employee_panel.Name = "update_employee_panel";
+            this.update_employee_panel.Size = new System.Drawing.Size(699, 617);
+            this.update_employee_panel.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(46, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(97, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Search For Update";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // update_id
+            // 
+            this.update_id.Location = new System.Drawing.Point(176, 19);
+            this.update_id.Multiline = true;
+            this.update_id.Name = "update_id";
+            this.update_id.Size = new System.Drawing.Size(244, 41);
+            this.update_id.TabIndex = 1;
+            this.update_id.TextChanged += new System.EventHandler(this.update_id_TextChanged);
+            // 
+            // update_error
+            // 
+            this.update_error.AutoSize = true;
+            this.update_error.Location = new System.Drawing.Point(455, 34);
+            this.update_error.Name = "update_error";
+            this.update_error.Size = new System.Drawing.Size(0, 13);
+            this.update_error.TabIndex = 2;
+            // 
+            // urole
+            // 
+            this.urole.FormattingEnabled = true;
+            this.urole.Items.AddRange(new object[] {
+            "MANAGER",
+            "STAFF"});
+            this.urole.Location = new System.Drawing.Point(254, 304);
+            this.urole.Name = "urole";
+            this.urole.Size = new System.Drawing.Size(260, 21);
+            this.urole.TabIndex = 19;
+            // 
+            // usalary
+            // 
+            this.usalary.Location = new System.Drawing.Point(254, 260);
+            this.usalary.Multiline = true;
+            this.usalary.Name = "usalary";
+            this.usalary.Size = new System.Drawing.Size(260, 30);
+            this.usalary.TabIndex = 15;
+            // 
+            // uaddress
+            // 
+            this.uaddress.Location = new System.Drawing.Point(254, 224);
+            this.uaddress.Multiline = true;
+            this.uaddress.Name = "uaddress";
+            this.uaddress.Size = new System.Drawing.Size(260, 30);
+            this.uaddress.TabIndex = 16;
+            // 
+            // uemail
+            // 
+            this.uemail.Location = new System.Drawing.Point(254, 188);
+            this.uemail.Multiline = true;
+            this.uemail.Name = "uemail";
+            this.uemail.Size = new System.Drawing.Size(260, 30);
+            this.uemail.TabIndex = 17;
+            // 
+            // uname
+            // 
+            this.uname.Location = new System.Drawing.Point(254, 142);
+            this.uname.Multiline = true;
+            this.uname.Name = "uname";
+            this.uname.Size = new System.Drawing.Size(260, 30);
+            this.uname.TabIndex = 18;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(33, 310);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(102, 16);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Employee Role";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(33, 261);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(112, 16);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Employee Salary";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(33, 225);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(124, 16);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Employee Address";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(42, 225);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(110, 16);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Employee Name";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(33, 189);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(107, 16);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Employee Email";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(33, 189);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(110, 16);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Employee Name";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(33, 147);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(110, 16);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Employee Name";
+            // 
+            // update_employee
+            // 
+            this.update_employee.Location = new System.Drawing.Point(328, 402);
+            this.update_employee.Name = "update_employee";
+            this.update_employee.Size = new System.Drawing.Size(75, 23);
+            this.update_employee.TabIndex = 20;
+            this.update_employee.Text = "Update";
+            this.update_employee.UseVisualStyleBackColor = true;
+            this.update_employee.Click += new System.EventHandler(this.update_employee_Click);
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1932, 1092);
-            this.Controls.Add(this.delete_employee_panel);
+            this.Controls.Add(this.update_employee_panel);
             this.Controls.Add(this.view_employee_panel);
             this.Controls.Add(this.add_employee_panel);
             this.Controls.Add(this.dashbord_panel);
@@ -444,6 +672,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.view_employee_grid)).EndInit();
             this.delete_employee_panel.ResumeLayout(false);
             this.delete_employee_panel.PerformLayout();
+            this.update_employee_panel.ResumeLayout(false);
+            this.update_employee_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -485,5 +715,25 @@
         private System.Windows.Forms.TextBox delete_id;
         private System.Windows.Forms.Label delete_label;
         private System.Windows.Forms.Label delete_error;
+        private MetroFramework.Controls.MetroButton update_employee_button;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.Panel update_employee_panel;
+        private System.Windows.Forms.TextBox update_id;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label update_error;
+        private System.Windows.Forms.ComboBox urole;
+        private System.Windows.Forms.TextBox usalary;
+        private System.Windows.Forms.TextBox uaddress;
+        private System.Windows.Forms.TextBox uemail;
+        private System.Windows.Forms.TextBox uname;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button update_employee;
     }
 }

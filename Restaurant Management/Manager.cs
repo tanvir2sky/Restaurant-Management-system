@@ -21,6 +21,7 @@ namespace Restaurant_Management
             add_table_panel.Visible = false;
             view_employee_panel.Visible = false;
             delete_employee_panel.Visible = false;
+            update_employee_panel.Visible = false;
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -97,6 +98,7 @@ namespace Restaurant_Management
                 
                 throw;
             }
+            MessageBox.Show("Successfully Added New Employee");
 
 
         }
@@ -167,6 +169,103 @@ namespace Restaurant_Management
         private void delete_employee_button_Click(object sender, EventArgs e)
         {
             delete_employee_panel.Visible = true;
+        }
+
+        private void update_employee_button_Click(object sender, EventArgs e)
+        {
+            update_employee_panel.Visible = true;
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void update_id_TextChanged(object sender, EventArgs e)
+        {
+            if (update_id.Text == "")
+            {
+
+                return;
+
+            }
+            int id = 0;
+            try
+            {
+                id = Convert.ToInt16(update_id.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            Employee emp = data.Employees.SingleOrDefault(x => x.Id == id);
+            if (emp == null) {
+                update_error.Text = "Cannot find with this id";
+                return;
+            
+            }
+            update_error.Text = "";
+            uname.Text = emp.e_name;
+            uaddress.Text = emp.e_address;
+            uemail.Text = emp.e_email;
+            usalary.Text = emp.e_salary.ToString();
+            urole.Text = emp.e_role;
+
+
+
+        }
+
+        private void update_employee_Click(object sender, EventArgs e)
+        {
+            if (update_id.Text == "")
+            {
+
+                return;
+
+            }
+            int id = 0;
+            try
+            {
+                id = Convert.ToInt16(update_id.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            string ename = uname.Text;
+            string eaddress = uaddress.Text;
+            string eemail = uemail.Text;
+            string erole = urole.Text;
+            decimal esalary = 0;
+            try
+            {
+                esalary = Convert.ToDecimal(usalary.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+
+            }
+
+            Employee emp = data.Employees.SingleOrDefault(x => x.Id == id);
+            
+                emp.e_name = ename;
+                emp.e_address = eaddress;
+                emp.e_email = eemail;
+                emp.e_role = erole;
+                emp.e_salary = esalary;
+                data.SubmitChanges();
+
+                MessageBox.Show("Successfully Updated");
+
+
+
+           
+
+            
         }
     }
 }
