@@ -16,64 +16,17 @@ namespace Restaurant_Management
         public Manager()
         {
             InitializeComponent();
-            add_employee_panel.Visible = false;
-            dashbord_panel.Visible = false;
-            add_table_panel.Visible = false;
-            view_employee_panel.Visible = false;
-            delete_employee_panel.Visible = false;
-            update_employee_panel.Visible = false;
+            view_employee_grid.DataSource = data.Employees;
+           
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
+       
 
-            add_employee_panel.Visible = false;
-            dashbord_panel.Visible = false;
-            add_table_panel.Visible = false;
-            view_employee_panel.Visible = false;
-            delete_employee_panel.Visible = false;
-            update_employee_panel.Visible = false;
-            dashbord_panel.Visible = true;
-        }
+       
 
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            add_employee_panel.Visible = false;
-            dashbord_panel.Visible = false;
-            add_table_panel.Visible = false;
-            view_employee_panel.Visible = false;
-            delete_employee_panel.Visible = false;
-            update_employee_panel.Visible = false;
-            add_employee_panel.Visible = true;
+       
 
-        }
-
-        private void Employee_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dashbord_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void add_employee_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void metroButton7_Click(object sender, EventArgs e)
-        {
-            add_employee_panel.Visible = false;
-            dashbord_panel.Visible = false;
-            add_table_panel.Visible = false;
-            view_employee_panel.Visible = false;
-            delete_employee_panel.Visible = false;
-            update_employee_panel.Visible = false;
-            add_table_panel.Visible = true;
-        }
-
+       
         private void add_employee_Click(object sender, EventArgs e)
         {
             string ename = name.Text;
@@ -132,18 +85,7 @@ namespace Restaurant_Management
 
         }
 
-        private void view_employee_button_Click(object sender, EventArgs e)
-        {
-            add_employee_panel.Visible = false;
-            dashbord_panel.Visible = false;
-            add_table_panel.Visible = false;
-            view_employee_panel.Visible = false;
-            delete_employee_panel.Visible = false;
-            update_employee_panel.Visible = false;
-            view_employee_panel.Visible = true;
-            view_employee_grid.DataSource = data.Employees;
 
-        }
 
         private void delete_button_Click(object sender, EventArgs e)
         {
@@ -201,27 +143,9 @@ namespace Restaurant_Management
 
         }
 
-        private void delete_employee_button_Click(object sender, EventArgs e)
-        {
-            add_employee_panel.Visible = false;
-            dashbord_panel.Visible = false;
-            add_table_panel.Visible = false;
-            view_employee_panel.Visible = false;
-            update_employee_panel.Visible = false;
-            delete_employee_panel.Visible = true;
-        }
+        
 
-        private void update_employee_button_Click(object sender, EventArgs e)
-        {
-            add_employee_panel.Visible = false;
-            dashbord_panel.Visible = false;
-            add_table_panel.Visible = false;
-            view_employee_panel.Visible = false;
-            delete_employee_panel.Visible = false;
-            update_employee_panel.Visible = false;
-            update_employee_panel.Visible = true;
-        }
-
+       
         private void label12_Click(object sender, EventArgs e)
         {
 
@@ -313,6 +237,11 @@ namespace Restaurant_Management
            
 
             
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
