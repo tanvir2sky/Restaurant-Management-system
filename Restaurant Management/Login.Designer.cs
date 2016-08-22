@@ -94,7 +94,7 @@
             this.password.SelectionStart = 0;
             this.password.ShortcutsEnabled = true;
             this.password.Size = new System.Drawing.Size(197, 23);
-            this.password.TabIndex = 1;
+            this.password.TabIndex = 2;
             this.password.UseSelectable = true;
             this.password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

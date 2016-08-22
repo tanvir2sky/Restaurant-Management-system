@@ -27,12 +27,23 @@ namespace Restaurant_Management
         private void metroButton1_Click(object sender, EventArgs e)
         {
 
-
+            add_employee_panel.Visible = false;
+            dashbord_panel.Visible = false;
+            add_table_panel.Visible = false;
+            view_employee_panel.Visible = false;
+            delete_employee_panel.Visible = false;
+            update_employee_panel.Visible = false;
             dashbord_panel.Visible = true;
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
+            add_employee_panel.Visible = false;
+            dashbord_panel.Visible = false;
+            add_table_panel.Visible = false;
+            view_employee_panel.Visible = false;
+            delete_employee_panel.Visible = false;
+            update_employee_panel.Visible = false;
             add_employee_panel.Visible = true;
 
         }
@@ -54,6 +65,12 @@ namespace Restaurant_Management
 
         private void metroButton7_Click(object sender, EventArgs e)
         {
+            add_employee_panel.Visible = false;
+            dashbord_panel.Visible = false;
+            add_table_panel.Visible = false;
+            view_employee_panel.Visible = false;
+            delete_employee_panel.Visible = false;
+            update_employee_panel.Visible = false;
             add_table_panel.Visible = true;
         }
 
@@ -117,6 +134,12 @@ namespace Restaurant_Management
 
         private void view_employee_button_Click(object sender, EventArgs e)
         {
+            add_employee_panel.Visible = false;
+            dashbord_panel.Visible = false;
+            add_table_panel.Visible = false;
+            view_employee_panel.Visible = false;
+            delete_employee_panel.Visible = false;
+            update_employee_panel.Visible = false;
             view_employee_panel.Visible = true;
             view_employee_grid.DataSource = data.Employees;
 
@@ -180,11 +203,22 @@ namespace Restaurant_Management
 
         private void delete_employee_button_Click(object sender, EventArgs e)
         {
+            add_employee_panel.Visible = false;
+            dashbord_panel.Visible = false;
+            add_table_panel.Visible = false;
+            view_employee_panel.Visible = false;
+            update_employee_panel.Visible = false;
             delete_employee_panel.Visible = true;
         }
 
         private void update_employee_button_Click(object sender, EventArgs e)
         {
+            add_employee_panel.Visible = false;
+            dashbord_panel.Visible = false;
+            add_table_panel.Visible = false;
+            view_employee_panel.Visible = false;
+            delete_employee_panel.Visible = false;
+            update_employee_panel.Visible = false;
             update_employee_panel.Visible = true;
         }
 
@@ -209,7 +243,8 @@ namespace Restaurant_Management
             catch (Exception)
             {
 
-                throw;
+                MessageBox.Show("Id should be integer ");
+                return;
             }
             Employee emp = data.Employees.SingleOrDefault(x => x.Id == id);
             if (emp == null) {

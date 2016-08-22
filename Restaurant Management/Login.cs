@@ -42,12 +42,14 @@ namespace Restaurant_Management
                 {
                     login l = data.logins.SingleOrDefault(x => x.email == user);
                     if (l.role == "manager") {
+                       
                         Manager m = new Manager();
                         m.Show();
                     
                     }
                     else if (l.role == "staff") {
                         Salesman s = new Salesman();
+                       
                         s.Show();
                     }
 

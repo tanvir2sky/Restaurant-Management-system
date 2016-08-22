@@ -44,10 +44,12 @@
             this.role = new System.Windows.Forms.ComboBox();
             this.date = new System.Windows.Forms.DateTimePicker();
             this.add_employee = new System.Windows.Forms.Button();
+            this.e_password = new System.Windows.Forms.TextBox();
             this.salary = new System.Windows.Forms.TextBox();
             this.address = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -83,8 +85,6 @@
             this.update_error = new System.Windows.Forms.Label();
             this.update_id = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.e_password = new System.Windows.Forms.TextBox();
             this.menu_panel.SuspendLayout();
             this.dashbord_panel.SuspendLayout();
             this.add_employee_panel.SuspendLayout();
@@ -203,9 +203,9 @@
             // dashbord_panel
             // 
             this.dashbord_panel.Controls.Add(this.label1);
-            this.dashbord_panel.Location = new System.Drawing.Point(1213, 49);
+            this.dashbord_panel.Location = new System.Drawing.Point(254, 23);
             this.dashbord_panel.Name = "dashbord_panel";
-            this.dashbord_panel.Size = new System.Drawing.Size(575, 602);
+            this.dashbord_panel.Size = new System.Drawing.Size(731, 617);
             this.dashbord_panel.TabIndex = 1;
             this.dashbord_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.dashbord_panel_Paint);
             // 
@@ -240,9 +240,9 @@
             this.add_employee_panel.Controls.Add(this.label4);
             this.add_employee_panel.Controls.Add(this.label3);
             this.add_employee_panel.Controls.Add(this.label2);
-            this.add_employee_panel.Location = new System.Drawing.Point(1032, 478);
+            this.add_employee_panel.Location = new System.Drawing.Point(254, 23);
             this.add_employee_panel.Name = "add_employee_panel";
-            this.add_employee_panel.Size = new System.Drawing.Size(574, 602);
+            this.add_employee_panel.Size = new System.Drawing.Size(731, 617);
             this.add_employee_panel.TabIndex = 1;
             this.add_employee_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.add_employee_panel_Paint);
             // 
@@ -273,6 +273,14 @@
             this.add_employee.Text = "Add Employee";
             this.add_employee.UseVisualStyleBackColor = true;
             this.add_employee.Click += new System.EventHandler(this.add_employee_Click);
+            // 
+            // e_password
+            // 
+            this.e_password.Location = new System.Drawing.Point(249, 332);
+            this.e_password.Multiline = true;
+            this.e_password.Name = "e_password";
+            this.e_password.Size = new System.Drawing.Size(260, 30);
+            this.e_password.TabIndex = 5;
             // 
             // salary
             // 
@@ -305,6 +313,16 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(260, 30);
             this.name.TabIndex = 5;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(28, 346);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(118, 16);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Sample Password";
             // 
             // label10
             // 
@@ -406,11 +424,10 @@
             // 
             // view_employee_panel
             // 
-            this.view_employee_panel.Controls.Add(this.delete_employee_panel);
             this.view_employee_panel.Controls.Add(this.view_employee_grid);
-            this.view_employee_panel.Location = new System.Drawing.Point(1102, 12);
+            this.view_employee_panel.Location = new System.Drawing.Point(254, 23);
             this.view_employee_panel.Name = "view_employee_panel";
-            this.view_employee_panel.Size = new System.Drawing.Size(722, 608);
+            this.view_employee_panel.Size = new System.Drawing.Size(731, 617);
             this.view_employee_panel.TabIndex = 3;
             // 
             // delete_employee_panel
@@ -420,9 +437,9 @@
             this.delete_employee_panel.Controls.Add(this.delete_button);
             this.delete_employee_panel.Controls.Add(this.label11);
             this.delete_employee_panel.Controls.Add(this.delete_id);
-            this.delete_employee_panel.Location = new System.Drawing.Point(3, 2);
+            this.delete_employee_panel.Location = new System.Drawing.Point(254, 23);
             this.delete_employee_panel.Name = "delete_employee_panel";
-            this.delete_employee_panel.Size = new System.Drawing.Size(665, 618);
+            this.delete_employee_panel.Size = new System.Drawing.Size(731, 617);
             this.delete_employee_panel.TabIndex = 4;
             // 
             // delete_error
@@ -500,9 +517,9 @@
             this.update_employee_panel.Controls.Add(this.update_error);
             this.update_employee_panel.Controls.Add(this.update_id);
             this.update_employee_panel.Controls.Add(this.label12);
-            this.update_employee_panel.Location = new System.Drawing.Point(253, 15);
+            this.update_employee_panel.Location = new System.Drawing.Point(254, 23);
             this.update_employee_panel.Name = "update_employee_panel";
-            this.update_employee_panel.Size = new System.Drawing.Size(699, 617);
+            this.update_employee_panel.Size = new System.Drawing.Size(731, 617);
             this.update_employee_panel.TabIndex = 4;
             // 
             // update_employee
@@ -510,7 +527,7 @@
             this.update_employee.Location = new System.Drawing.Point(328, 402);
             this.update_employee.Name = "update_employee";
             this.update_employee.Size = new System.Drawing.Size(75, 23);
-            this.update_employee.TabIndex = 20;
+            this.update_employee.TabIndex = 7;
             this.update_employee.Text = "Update";
             this.update_employee.UseVisualStyleBackColor = true;
             this.update_employee.Click += new System.EventHandler(this.update_employee_Click);
@@ -525,7 +542,7 @@
             this.urole.Location = new System.Drawing.Point(254, 304);
             this.urole.Name = "urole";
             this.urole.Size = new System.Drawing.Size(260, 21);
-            this.urole.TabIndex = 19;
+            this.urole.TabIndex = 6;
             // 
             // usalary
             // 
@@ -533,7 +550,7 @@
             this.usalary.Multiline = true;
             this.usalary.Name = "usalary";
             this.usalary.Size = new System.Drawing.Size(260, 30);
-            this.usalary.TabIndex = 15;
+            this.usalary.TabIndex = 5;
             // 
             // uaddress
             // 
@@ -541,7 +558,7 @@
             this.uaddress.Multiline = true;
             this.uaddress.Name = "uaddress";
             this.uaddress.Size = new System.Drawing.Size(260, 30);
-            this.uaddress.TabIndex = 16;
+            this.uaddress.TabIndex = 4;
             // 
             // uemail
             // 
@@ -549,7 +566,7 @@
             this.uemail.Multiline = true;
             this.uemail.Name = "uemail";
             this.uemail.Size = new System.Drawing.Size(260, 30);
-            this.uemail.TabIndex = 17;
+            this.uemail.TabIndex = 3;
             // 
             // uname
             // 
@@ -557,7 +574,7 @@
             this.uname.Multiline = true;
             this.uname.Name = "uname";
             this.uname.Size = new System.Drawing.Size(260, 30);
-            this.uname.TabIndex = 18;
+            this.uname.TabIndex = 2;
             // 
             // label13
             // 
@@ -632,14 +649,14 @@
             // update_error
             // 
             this.update_error.AutoSize = true;
-            this.update_error.Location = new System.Drawing.Point(455, 34);
+            this.update_error.Location = new System.Drawing.Point(514, 30);
             this.update_error.Name = "update_error";
             this.update_error.Size = new System.Drawing.Size(0, 13);
             this.update_error.TabIndex = 2;
             // 
             // update_id
             // 
-            this.update_id.Location = new System.Drawing.Point(254, 27);
+            this.update_id.Location = new System.Drawing.Point(248, 34);
             this.update_id.Multiline = true;
             this.update_id.Name = "update_id";
             this.update_id.Size = new System.Drawing.Size(260, 41);
@@ -656,29 +673,12 @@
             this.label12.Text = "Search For Update";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(28, 346);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(118, 16);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "Sample Password";
-            // 
-            // e_password
-            // 
-            this.e_password.Location = new System.Drawing.Point(249, 332);
-            this.e_password.Multiline = true;
-            this.e_password.Name = "e_password";
-            this.e_password.Size = new System.Drawing.Size(260, 30);
-            this.e_password.TabIndex = 5;
-            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1932, 1092);
+            this.Controls.Add(this.delete_employee_panel);
             this.Controls.Add(this.update_employee_panel);
             this.Controls.Add(this.view_employee_panel);
             this.Controls.Add(this.add_employee_panel);
