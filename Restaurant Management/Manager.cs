@@ -127,8 +127,10 @@ namespace Restaurant_Management
             }
             catch (Exception)
             {
-                
-                throw;
+
+                MessageBox.Show("Please Insert Only Integer Values", "Error Ocured",
+            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             Employee emp = data.Employees.SingleOrDefault(x => x.Id == id);
             if (emp == null)
@@ -167,7 +169,8 @@ namespace Restaurant_Management
             catch (Exception)
             {
 
-                MessageBox.Show("Id should be integer ");
+                MessageBox.Show("Please Insert Only Integer Values", "Error Ocured",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Employee emp = data.Employees.SingleOrDefault(x => x.Id == id);
