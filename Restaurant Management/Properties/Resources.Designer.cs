@@ -79,5 +79,25 @@ namespace Restaurant_Management.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1472135864_vector_65_01 {
+            get {
+                object obj = ResourceManager.GetObject("1472135864_vector_65_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1472138557_clipboard_charts {
+            get {
+                object obj = ResourceManager.GetObject("1472138557_clipboard-charts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

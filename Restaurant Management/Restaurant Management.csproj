@@ -142,6 +142,8 @@
   <ItemGroup>
     <None Include="Resources\1472135039_Iconfinder_0009_Shape-240.png" />
     <None Include="Resources\1472135682_vector_65_04.png" />
+    <None Include="Resources\1472138557_clipboard-charts.png" />
+    <None Include="Resources\1472135864_vector_65_01.png" />
     <Content Include="RMS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

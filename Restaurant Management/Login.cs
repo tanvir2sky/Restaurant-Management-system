@@ -42,6 +42,41 @@ namespace Restaurant_Management
                 {
                     login l = data.logins.SingleOrDefault(x => x.email == user);
                     Employee em = data.Employees.SingleOrDefault(x => x.e_email == user);
+
+                    String edate = DateTime.Today.ToString("dd-MM-yyyy");
+
+                    var check = from m in data.attendences where m.date == edate && m.isAlreadyGiven == 1 && m.e_id == em.Id select m;
+                    if (check.Count() == 0)
+                    {
+
+                        attendence a = new attendence
+                        {
+
+                            e_id = em.Id,
+                            date = edate,
+                            isAttend = 1,
+                            isAlreadyGiven = 1,
+                            checkInTime = DateTime.Now.ToString("HH:mm:ss")
+
+
+                        };
+                        try
+                        {
+                            data.attendences.InsertOnSubmit(a);
+                            data.SubmitChanges();
+                        }
+                        catch (Exception )
+                        {
+                           
+                            
+                             MessageBox.Show("Cannot Give attendence", "Error Occured",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return; 
+                        }
+                    
+                    }
+
+
                     if (l.role == "manager") {
                        
                         Manager m = new Manager(em.e_name,em.e_role);

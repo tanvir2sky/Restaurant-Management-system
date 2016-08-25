@@ -9,6 +9,7 @@
       <Column Name="e_salary" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="e_role" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="e_joining_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Employee_attendence" Member="attendences" ThisKey="Id" OtherKey="e_id" Type="attendence" />
     </Type>
   </Table>
   <Table Name="dbo.login" Member="logins">
@@ -17,6 +18,17 @@
       <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="role" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.attendence" Member="attendences">
+    <Type Name="attendence">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="e_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="isAttend" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="isAlreadyGiven" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="checkInTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Employee_attendence" Member="Employee" ThisKey="e_id" OtherKey="Id" Type="Employee" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

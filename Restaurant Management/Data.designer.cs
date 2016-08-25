@@ -36,6 +36,9 @@ namespace Restaurant_Management
     partial void Insertlogin(login instance);
     partial void Updatelogin(login instance);
     partial void Deletelogin(login instance);
+    partial void Insertattendence(attendence instance);
+    partial void Updateattendence(attendence instance);
+    partial void Deleteattendence(attendence instance);
     #endregion
 		
 		public DataDataContext() : 
@@ -83,6 +86,14 @@ namespace Restaurant_Management
 				return this.GetTable<login>();
 			}
 		}
+		
+		public System.Data.Linq.Table<attendence> attendences
+		{
+			get
+			{
+				return this.GetTable<attendence>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employee")]
@@ -104,6 +115,8 @@ namespace Restaurant_Management
 		private string _e_role;
 		
 		private string _e_joining_date;
+		
+		private EntitySet<attendence> _attendences;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -127,6 +140,7 @@ namespace Restaurant_Management
 		
 		public Employee()
 		{
+			this._attendences = new EntitySet<attendence>(new Action<attendence>(this.attach_attendences), new Action<attendence>(this.detach_attendences));
 			OnCreated();
 		}
 		
@@ -270,6 +284,19 @@ namespace Restaurant_Management
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_attendence", Storage="_attendences", ThisKey="Id", OtherKey="e_id")]
+		public EntitySet<attendence> attendences
+		{
+			get
+			{
+				return this._attendences;
+			}
+			set
+			{
+				this._attendences.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -288,6 +315,18 @@ namespace Restaurant_Management
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_attendences(attendence entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_attendences(attendence entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
 		}
 	}
 	
@@ -400,6 +439,229 @@ namespace Restaurant_Management
 					this._role = value;
 					this.SendPropertyChanged("role");
 					this.OnroleChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.attendence")]
+	public partial class attendence : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _e_id;
+		
+		private string _date;
+		
+		private byte _isAttend;
+		
+		private byte _isAlreadyGiven;
+		
+		private string _checkInTime;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void One_idChanging(int value);
+    partial void One_idChanged();
+    partial void OndateChanging(string value);
+    partial void OndateChanged();
+    partial void OnisAttendChanging(byte value);
+    partial void OnisAttendChanged();
+    partial void OnisAlreadyGivenChanging(byte value);
+    partial void OnisAlreadyGivenChanged();
+    partial void OncheckInTimeChanging(string value);
+    partial void OncheckInTimeChanged();
+    #endregion
+		
+		public attendence()
+		{
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_e_id", DbType="Int NOT NULL")]
+		public int e_id
+		{
+			get
+			{
+				return this._e_id;
+			}
+			set
+			{
+				if ((this._e_id != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.One_idChanging(value);
+					this.SendPropertyChanging();
+					this._e_id = value;
+					this.SendPropertyChanged("e_id");
+					this.One_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string date
+		{
+			get
+			{
+				return this._date;
+			}
+			set
+			{
+				if ((this._date != value))
+				{
+					this.OndateChanging(value);
+					this.SendPropertyChanging();
+					this._date = value;
+					this.SendPropertyChanged("date");
+					this.OndateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isAttend", DbType="TinyInt NOT NULL")]
+		public byte isAttend
+		{
+			get
+			{
+				return this._isAttend;
+			}
+			set
+			{
+				if ((this._isAttend != value))
+				{
+					this.OnisAttendChanging(value);
+					this.SendPropertyChanging();
+					this._isAttend = value;
+					this.SendPropertyChanged("isAttend");
+					this.OnisAttendChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isAlreadyGiven", DbType="TinyInt NOT NULL")]
+		public byte isAlreadyGiven
+		{
+			get
+			{
+				return this._isAlreadyGiven;
+			}
+			set
+			{
+				if ((this._isAlreadyGiven != value))
+				{
+					this.OnisAlreadyGivenChanging(value);
+					this.SendPropertyChanging();
+					this._isAlreadyGiven = value;
+					this.SendPropertyChanged("isAlreadyGiven");
+					this.OnisAlreadyGivenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_checkInTime", DbType="VarChar(50)")]
+		public string checkInTime
+		{
+			get
+			{
+				return this._checkInTime;
+			}
+			set
+			{
+				if ((this._checkInTime != value))
+				{
+					this.OncheckInTimeChanging(value);
+					this.SendPropertyChanging();
+					this._checkInTime = value;
+					this.SendPropertyChanged("checkInTime");
+					this.OncheckInTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_attendence", Storage="_Employee", ThisKey="e_id", OtherKey="Id", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.attendences.Remove(this);
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.attendences.Add(this);
+						this._e_id = value.Id;
+					}
+					else
+					{
+						this._e_id = default(int);
+					}
+					this.SendPropertyChanged("Employee");
 				}
 			}
 		}

@@ -135,7 +135,7 @@ namespace Restaurant_Management
             catch (Exception)
             {
 
-                MessageBox.Show("Please Insert Only Integer Values", "Error Ocured",
+                MessageBox.Show("Please Insert Only Integer Values", "Error Occured",
             MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
