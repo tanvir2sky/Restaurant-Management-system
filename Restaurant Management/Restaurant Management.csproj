@@ -141,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1472135039_Iconfinder_0009_Shape-240.png" />
+    <None Include="Resources\1472135682_vector_65_04.png" />
     <Content Include="RMS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

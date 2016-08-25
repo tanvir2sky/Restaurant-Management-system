@@ -80,6 +80,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.update_id = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -89,6 +91,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.view_employee_grid)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.metroPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +114,7 @@
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.metroPanel2);
             this.tabPage1.Controls.Add(this.metroPanel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Name = "tabPage1";
@@ -661,6 +666,32 @@
             this.label31.TabIndex = 15;
             this.label31.Text = "Search For Update";
             // 
+            // metroPanel2
+            // 
+            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(163)))));
+            this.metroPanel2.Controls.Add(this.pictureBox2);
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(6, 0);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(403, 132);
+            this.metroPanel2.TabIndex = 3;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.UseCustomForeColor = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Restaurant_Management.Properties.Resources._1472135682_vector_65_04;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Restaurant_Management.Properties.Resources._1472135039_Iconfinder_0009_Shape_240;
@@ -689,6 +720,8 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.metroPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -749,5 +782,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
