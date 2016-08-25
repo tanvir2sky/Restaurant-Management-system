@@ -12,11 +12,18 @@ namespace Restaurant_Management
 {
     public partial class Manager : MetroFramework.Forms.MetroForm
     {
+        private string showname;
+        private string showrole;
         DataDataContext data = new DataDataContext(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\tanvi\OneDrive\Documents\GitHub\Restaurant-Management-system\Restaurant Management\RMS.mdf;Integrated Security=True");
-        public Manager()
+        public Manager(string name,string role)
         {
             InitializeComponent();
+            this.showname = name;
+            this.showrole = role;
             view_employee_grid.DataSource = data.Employees;
+            welcome.Text = this.showname;
+            metroLabel1.Text = this.showrole;
+            metroLabel2.Text =  Greetings.getGreting();
            
         }
 
