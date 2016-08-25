@@ -115,6 +115,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Salesman.resx">
       <DependentUpon>Salesman.cs</DependentUpon>
@@ -139,6 +140,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1472135039_Iconfinder_0009_Shape-240.png" />
     <Content Include="RMS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

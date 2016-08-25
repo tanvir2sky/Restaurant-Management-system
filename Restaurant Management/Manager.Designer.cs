@@ -30,8 +30,13 @@
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.welcome = new MetroFramework.Controls.MetroLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.role = new System.Windows.Forms.ComboBox();
+            this.date = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.e_password = new System.Windows.Forms.TextBox();
             this.salary = new System.Windows.Forms.TextBox();
@@ -75,19 +80,16 @@
             this.label30 = new System.Windows.Forms.Label();
             this.update_id = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.DateTimePicker();
-            this.welcome = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_employee_grid)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -114,6 +116,76 @@
             this.tabPage1.Size = new System.Drawing.Size(1190, 612);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dashboard";
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
+            this.metroPanel1.Controls.Add(this.pictureBox1);
+            this.metroPanel1.Controls.Add(this.metroLabel2);
+            this.metroPanel1.Controls.Add(this.metroLabel1);
+            this.metroPanel1.Controls.Add(this.welcome);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(720, -2);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(462, 144);
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.UseCustomForeColor = true;
+            this.metroPanel1.UseStyleColors = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.metroLabel2.Location = new System.Drawing.Point(356, 15);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(103, 25);
+            this.metroLabel2.TabIndex = 2;
+            this.metroLabel2.Text = "metroLabel1";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.metroLabel2.UseCustomBackColor = true;
+            this.metroLabel2.UseCustomForeColor = true;
+            this.metroLabel2.UseStyleColors = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel1.ForeColor = System.Drawing.Color.White;
+            this.metroLabel1.Location = new System.Drawing.Point(187, 40);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(68, 15);
+            this.metroLabel1.TabIndex = 1;
+            this.metroLabel1.Text = "metroLabel1";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
+            this.metroLabel1.UseStyleColors = true;
+            // 
+            // welcome
+            // 
+            this.welcome.AutoSize = true;
+            this.welcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
+            this.welcome.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.welcome.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.welcome.ForeColor = System.Drawing.Color.White;
+            this.welcome.Location = new System.Drawing.Point(137, 15);
+            this.welcome.Name = "welcome";
+            this.welcome.Size = new System.Drawing.Size(118, 25);
+            this.welcome.TabIndex = 0;
+            this.welcome.Text = "metroLabel1";
+            this.welcome.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.welcome.UseCustomBackColor = true;
+            this.welcome.UseCustomForeColor = true;
+            this.welcome.UseStyleColors = true;
             // 
             // tabPage2
             // 
@@ -153,6 +225,13 @@
             this.role.Name = "role";
             this.role.Size = new System.Drawing.Size(260, 21);
             this.role.TabIndex = 25;
+            // 
+            // date
+            // 
+            this.date.Location = new System.Drawing.Point(572, 355);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(260, 20);
+            this.date.TabIndex = 26;
             // 
             // button3
             // 
@@ -582,81 +661,14 @@
             this.label31.TabIndex = 15;
             this.label31.Text = "Search For Update";
             // 
-            // date
+            // pictureBox1
             // 
-            this.date.Location = new System.Drawing.Point(572, 355);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(260, 20);
-            this.date.TabIndex = 26;
-            // 
-            // welcome
-            // 
-            this.welcome.AutoSize = true;
-            this.welcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
-            this.welcome.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.welcome.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.welcome.ForeColor = System.Drawing.Color.White;
-            this.welcome.Location = new System.Drawing.Point(21, 15);
-            this.welcome.Name = "welcome";
-            this.welcome.Size = new System.Drawing.Size(103, 25);
-            this.welcome.TabIndex = 0;
-            this.welcome.Text = "metroLabel1";
-            this.welcome.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.welcome.UseCustomBackColor = true;
-            this.welcome.UseCustomForeColor = true;
-            this.welcome.UseStyleColors = true;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel1.ForeColor = System.Drawing.Color.White;
-            this.metroLabel1.Location = new System.Drawing.Point(71, 40);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(103, 25);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "metroLabel1";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            this.metroLabel1.UseStyleColors = true;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
-            this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.metroLabel1);
-            this.metroPanel1.Controls.Add(this.welcome);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(835, 8);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(347, 113);
-            this.metroPanel1.TabIndex = 2;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.UseCustomForeColor = true;
-            this.metroPanel1.UseStyleColors = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.ForeColor = System.Drawing.Color.White;
-            this.metroLabel2.Location = new System.Drawing.Point(220, 15);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(103, 25);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "metroLabel1";
-            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.metroLabel2.UseCustomBackColor = true;
-            this.metroLabel2.UseCustomForeColor = true;
-            this.metroLabel2.UseStyleColors = true;
+            this.pictureBox1.Image = global::Restaurant_Management.Properties.Resources._1472135039_Iconfinder_0009_Shape_240;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 135);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // Manager
             // 
@@ -667,6 +679,8 @@
             this.Name = "Manager";
             this.metroTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -675,8 +689,7 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -735,5 +748,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
